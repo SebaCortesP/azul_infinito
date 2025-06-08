@@ -57,8 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
       errors.push(
         "Debes ingresar tu contraseña actual para confirmar los cambios."
       );
-    } else if (currentPassword !== loggedUser.password) {
-      errors.push("La contraseña actual es incorrecta.");
     }
 
     const isAnyPasswordFieldFilled =

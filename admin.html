@@ -1,132 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Azul Infinito | El libro de Sanji</title>
-  </head>
-  <body>
-    <nav
-      class="navbar navbar-expand-lg primary-background bg-light border-bottom"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand is-white" href="admin.html">
-          <img
-            src="./assets/img/logo.png"
-            alt="Logo"
-            width="40"
-            height="34"
-            class="d-inline-block align-text-top"
-          />
-          Azul Infinito
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link active is-white"
-                aria-current="page"
-                href="admin.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle text-white"
-                href="#"
-                role="button"
-                id="user-name"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i class="fas fa-user"></i> Usuario Normal
-              </a>
-              <ul class="dropdown-menu">
-                <!-- <li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Azul Infinito | Admin</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg primary-background bg-light border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand is-white" href="admin.html">
+        <img src="./assets/img/logo-sanji.png" alt="Logo" width="40" height="34"
+          class="d-inline-block align-text-top" />
+        Azul Infinito <span id="header-title">| El libro de Sanji </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active is-white" aria-current="page" href="admin.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" id="user-name"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user"></i> Usuario Normal
+            </a>
+            <ul class="dropdown-menu">
+              <!-- <li>
                   <a class="dropdown-item" href="perfil.html">Editar Perfil</a>
                 </li> -->
-                <li class="nav-item">
-                  <a class="dropdown-item" href="index.html">Cerrar Sesión</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+              <li class="nav-item">
+                <a class="dropdown-item" href="index.html">Cerrar Sesión</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div id="carouselSingle" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active position-relative">
-          <img
-            src="./assets/img/sanjihero3.webp"
-            class="d-block w-100 img-fluid"
-            alt="Imagen única"
-            style="max-height: 400px; object-fit: fill;"
-          />
-          <!-- <img
-            src="./assets/img/carousel2.jpg"
-            class="d-block w-100 img-fluid"
-            alt="Imagen única"
-            style="max-height: 400px; object-fit: cover"
-          /> -->
-          <div
-            class="position-absolute top-50 start-50 translate-middle text-center px-4 py-3"
-            style="
-              background-color: rgba(0, 0, 0, 0.5);
-              color: white;
-              border-radius: 8px;
-              min-width: 350px;
-            "
-          >
-            <h2 class="fw-bold mb-2">Azul Infinito</h2>
-            <p class="mb-0">El libro de cocina de Sanji</p>
+  <main class="container my-5">
+    <h2 class="mb-4">Panel de Administración</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+      <div class="col">
+        <div class="card text-white bg-primary h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title"> Usuarios Registrados</h5>
+            <p class="card-text fs-4">1,234</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="main-content pt-5 pb-5">
-        <main class="container pt-5 pb-5 custom-container">
-          <h2>Agenda tu clase de cocina</h2>
-          <p>
-            Azul Infinito es una plataforma que busca conectar el conocimiento con
-            la creatividad. Nuestro propósito es ofrecer experiencias enriquecedoras
-            a través de contenido visual, educativo y entretenido.
-          </p>
-          <button class="btn btn-primary">Agendar</button>
-        </main>
-    </div>
 
-        <footer
-      class="bg-light text-center text-lg-start mt-5 border-top primary-background border-top"
-    >
-      <div class="text-center p-3 primary-background text-white">
-        © 2025 Azul Infinito. Todos los derechos reservados.
+      <div class="col">
+        <div class="card text-white bg-success h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Usuarios Activos</h5>
+            <p class="card-text fs-4">567</p>
+          </div>
+        </div>
       </div>
-    </footer>
-    <script src="./assets/js/user.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+
+      <div class="col">
+        <div class="card text-white bg-warning h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Nuevos este mes</h5>
+            <p class="card-text fs-4">89</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card text-white bg-danger h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Total de Recetas</h5>
+            <p class="card-text fs-4">342</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card text-white bg-info h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Recetas este mes</h5>
+            <p class="card-text fs-4">45</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card text-white bg-secondary h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Comentarios totales</h5>
+            <p class="card-text fs-4">1,025</p>
+          </div>
+        </div>
+      </div>
+        <!-- Gráfico de líneas -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">📈 Recetas creadas por mes</h5>
+              <canvas id="lineChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gráfico de barras -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">👤 Usuarios registrados por mes</h5>
+              <canvas id="barChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gráfico de torta -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">🍲 Recetas por categoría</h5>
+              <canvas id="pieChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gráfico de radar -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">📊 Interacción por receta</h5>
+              <canvas id="radarChart"></canvas>
+            </div>
+          </div>
+        </div>
+    </div>
+  </main>
+
+
+
+  <footer class="bg-light text-center text-lg-start mt-5 border-top primary-background border-top">
+    <div class="text-center p-3 primary-background text-white">
+      © 2025 Azul Infinito. Todos los derechos reservados.
+    </div>
+  </footer>
+  <script src="./assets/js/user.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // 1. Gráfico de líneas
+    new Chart(document.getElementById("lineChart"), {
+      type: "line",
+      data: {
+        labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
+        datasets: [{
+          label: "Recetas",
+          data: [10, 20, 25, 30, 40, 60],
+          borderColor: "#0d6efd",
+          backgroundColor: "rgba(13, 110, 253, 0.2)",
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: { scales: { y: { beginAtZero: true } } }
+    });
+
+    // 2. Gráfico de barras
+    new Chart(document.getElementById("barChart"), {
+      type: "bar",
+      data: {
+        labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
+        datasets: [{
+          label: "Usuarios",
+          data: [5, 10, 15, 12, 20, 25],
+          backgroundColor: "#198754"
+        }]
+      },
+      options: { scales: { y: { beginAtZero: true } } }
+    });
+
+    // 3. Gráfico de torta
+    new Chart(document.getElementById("pieChart"), {
+      type: "pie",
+      data: {
+        labels: ["Postres", "Pastas", "Ensaladas", "Carnes", "Veganas"],
+        datasets: [{
+          data: [25, 15, 10, 30, 20],
+          backgroundColor: [
+            "#fd7e14", "#ffc107", "#20c997", "#0dcaf0", "#dc3545"
+          ]
+        }]
+      }
+    });
+
+    // 4. Gráfico de radar
+    new Chart(document.getElementById("radarChart"), {
+      type: "radar",
+      data: {
+        labels: ["Comentarios", "Likes", "Guardadas", "Cocinadas", "Compartidas"],
+        datasets: [{
+          label: "Promedio por receta",
+          data: [12, 18, 9, 22, 14],
+          backgroundColor: "rgba(13, 110, 253, 0.3)",
+          borderColor: "#0d6efd"
+        }]
+      },
+      options: {
+        scales: { r: { beginAtZero: true } }
+      }
+    });
+  </script>
+</body>
+
 </html>

@@ -53,19 +53,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let updatePassword = false;
 
-    if (currentPassword || newPassword || confirmNewPassword) {
-      if (currentPassword !== loggedUser.password) {
-        errors.push("La contraseña actual es incorrecta.");
+    if (!currentPassword) {
+      errors.push(
+        "Debes ingresar tu contraseña actual para confirmar los cambios."
+      );
+    } else if (currentPassword !== loggedUser.password) {
+      errors.push("La contraseña actual es incorrecta.");
+    }
+
+    const isAnyPasswordFieldFilled =
+      currentPassword || newPassword || confirmNewPassword;
+
+    if (isAnyPasswordFieldFilled) {
+      // Requiere los 3 campos completos
+      if (!currentPassword || !newPassword || !confirmNewPassword) {
+        errors.push("Debes completar todos los campos de contraseña.");
+      } else {
+        if (newPassword !== confirmNewPassword) {
+          errors.push("Las contraseñas nuevas no coinciden.");
+        }
+        if (!validatePassword(newPassword)) {
+          errors.push(
+            "La nueva contraseña debe tener entre 8 y 16 caracteres, al menos una mayúscula, un número y un símbolo."
+          );
+        } else {
+          updatePassword = true;
+        }
       }
-      if (newPassword !== confirmNewPassword) {
-        errors.push("Las contraseñas nuevas no coinciden.");
-      }
-      if (!validatePassword(newPassword)) {
-        errors.push(
-          "La nueva contraseña debe tener entre 8 y 16 caracteres, al menos una mayúscula, un número y un símbolo."
-        );
-      }
-      updatePassword = true;
     }
 
     if (errors.length > 0) {

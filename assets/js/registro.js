@@ -133,9 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
       alert.classList.add("hide");
       setTimeout(() => alert.remove(), 300);
     }, 5000);
-    setTimeout(() => {
-      window.location.href = "user.html";
-    }, 1500);
   }
 });
   
